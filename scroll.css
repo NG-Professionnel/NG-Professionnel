@@ -1,0 +1,224 @@
+/******** 00 Normalize CSS *********/
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+  background-color: #fff;
+  font-family: 'Montserrat', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0px;
+  padding: 0px;
+}
+
+ul, ol {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+a, a:hover, a:focus {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  width: 90%;
+  max-width: 1170px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.clearfix {
+  clear: both;
+}
+
+section {
+  padding: 70px 0;
+}
+
+h2 {
+  font-size: 30px;
+  color: #222;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+
+/********* 02 Home Background **********/
+#home-bg {
+  width: 100%;
+  height: 100%;
+  background-image: url("https://picsum.photos/960/514?image=1050");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.flex-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+}
+
+.flex-container h2 {
+  font-size: 40px;
+  margin-bottom: 1em;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.flex-container .social-icons a {
+  padding: 0 10px;
+  font-size: 16px;
+  color: #fff;
+}
+
+
+
+
+/*********** 05 Resume **********/
+#resume h3 {
+  text-transform: capitalize;
+  font-size: 1.5em;
+}
+
+.year {
+  display: inline-block;
+  color: #fff;
+  background-color: #000;
+  padding: 5px 15px;
+  margin: 10px 0;
+}
+
+.title h4 {
+  font-size: 1.2em;
+  line-height: 1.7em;
+}
+
+.title h6 {
+  font-size: 0.9em;
+  line-height: 1.8em;
+}
+
+.detail {
+  margin: 10px 0;
+  line-height: 1.5em;
+  font-weight: 600;
+}
+
+.education {
+  border-bottom: 1px solid #000;
+  margin-bottom: 15px;
+}
+
+
+
+
+
+
+/*********** 09 Footer *********/
+footer {
+  padding: 80px 0;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+}
+
+.footer-content p {
+  line-height: 22px;
+}
+
+.footer-social-icon a i {
+  color: #fff;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: 15px;
+  margin-right: 15px;
+}
+
+/*********** >768px **********/
+@media screen and (min-width: 768px) {
+  h2 {
+    font-size: 40px;
+    margin-bottom: 75px;
+  }
+
+  section {
+    padding: 100px 0;
+  }
+
+  .container {
+    width: 85%;
+    max-width: 1170px;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+
+  /***** 02 Home Background ******/
+  #home-bg .flex-container h2 {
+    font-size: 54px;
+  }
+
+  #home-bg .flex-container .social-icons a {
+    font-size: 19px;
+  }
+
+  
+
+  /******* 05 Resume *******/
+  #resume h3 {
+    padding-left: 10px;
+  }
+
+  .education {
+    margin-bottom: 20px;
+  }
+  .education, .experience {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .education-item, .experience-item {
+    width: 50%;
+    padding: 0 10px;
+    margin-bottom: 10px;
+  }

@@ -1,0 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#particles-js{
+  background: linear-gradient(to left bottom, rgb(0, 0, 0) 5% , rgb(0, 0, 0));
+  background-size: cover;
+}

@@ -1,0 +1,151 @@
+.page {
+  height: 100vh;
+}
+.page.particule {
+  background: url(particules.html);
+}
+.page.dark {
+  background: url(dark.html);
+}
+.page.jeu {
+  background: url(jeu.html);
+}
+.page.create {
+  background: url(create-planet.html);
+}
+.page.city {
+  background: url(city3d.html);
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.container {
+  margin: auto;
+  width: 300px;
+  height: 100%;
+  background-color: #171c28;
+  color: #99a3ba;
+  border-radius: 40px;
+  text-align: center;
+  position: relative;
+  right: 20px;
+  font-family: "Shadows Into Light", cursive;
+}
+.container.open {
+  display: block;
+}
+.container .date {
+  padding-top: 5px;
+  font-size: 20px;
+  height: 120px;
+  letter-spacing: 2px;
+}
+.container .theme {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease-in-out;
+}
+.container .theme.open .theme__btn-plus {
+  background: transparent;
+  box-shadow: none;
+  transform: rotate(90deg);
+}
+.container .theme.open .theme__btn-plus::before {
+  transform: rotate(450deg);
+}
+.container .theme .theme__btn {
+  text-align: initial;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border-style: double;
+  border-color: rgba(75, 75, 75, 0.377);
+  background-color: rgba(75, 75, 75, 0.377);
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.container .theme .theme__btn.open .theme__btn-plus {
+  background: transparent;
+  box-shadow: none;
+  transform: rotate(90deg);
+}
+.container .theme .theme__btn.open .theme__btn-plus::before {
+  transform: rotate(450deg);
+}
+.container .theme .theme__btn-plus {
+  position: absolute;
+  width: 20px;
+  height: 5px;
+  background: white;
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
+  transform: rotate(90deg);
+}
+.container .theme .theme__btn-plus::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 5px;
+  background: white;
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
+  transform: rotate(90deg);
+}
+.container .theme .theme__option {
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  transition: 0.8s;
+  pointer-events: none;
+}
+.container .theme .theme__option li {
+  text-align: center;
+  opacity: 0;
+  padding: 4px;
+}
+.container .theme .theme__option li a {
+  display: block;
+  width: 150px;
+  text-decoration: none;
+  color: white;
+  padding: 0 5px 0 5px;
+  border-radius: 20px;
+  background-color: #4b4b4b;
+  opacity: 0.8;
+}
+.container .theme .theme__option li a:hover {
+  opacity: 0.6;
+}
+.container .theme .theme__option.closed li {
+  animation: 700ms open-closed both reverse;
+}
+.container .theme .theme__option.open li {
+  display: block;
+  animation: 800ms open-closed both;
+}
+.container .theme .theme__option.open li a {
+  cursor: pointer;
+  pointer-events: initial;
+}
+@keyframes open-closed {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
